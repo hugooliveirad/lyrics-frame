@@ -9,7 +9,7 @@ imgs_dir = "/home/pi/lyrics-frame/images"
 
 imgs = [os.path.join(imgs_dir, f) for f in os.listdir(imgs_dir) if os.path.isfile(os.path.join(imgs_dir, f))]
 
-day_of_year = datetime.now()
+day_of_year = datetime.now().timetuple().tm_yday - 1
 
 img_of_the_day = day_of_year % len(imgs)
 
